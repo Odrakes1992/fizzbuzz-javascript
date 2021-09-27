@@ -1,13 +1,19 @@
 
 class FizzBuzz {
 
+  _isDivisibleBy(divisor, number) {
+    return number % divisor === 0;
+  }
+
   play(number) {
-    if (number % 3 == 0) {
-      return "fizz"; 
-    } else if (number % 5 == 0) {
+    if (this._isDivisibleBy(15, number)) {
+      return "fizzbuzz"; 
+    } else if (this._isDivisibleBy(5, number)) {
       return "buzz";
+    } else if (this._isDivisibleBy(3, number)) {
+      return "fizz";
+    } else {
+      return number;
     }
-  };
-
-
+  }
 }

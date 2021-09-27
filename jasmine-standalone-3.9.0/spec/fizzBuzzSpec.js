@@ -24,7 +24,21 @@ describe("FizzBuzz", () => {
     });
   });
 
+  describe('multiples of 3 and 5', () => {
+    it('fizzbuzzes for 15', () => {
+      expect(fizzBuzz.play(15)).toEqual("fizzbuzz");
+    });
+    it("fizzbuzzes for 30", () => {
+      expect(fizzBuzz.play(30)).toEqual("fizzbuzz");
+    });
+  });
 
-
-
+  describe('all other numbers', () => {
+    it('returns the number 1', () => {
+      expect(fizzBuzz.play(1)).toEqual(1);
+    });
+    it('returns the number 11', () => {
+      expect(fizzBuzz.play(11)).toEqual(11);
+    });
+  });
 });
